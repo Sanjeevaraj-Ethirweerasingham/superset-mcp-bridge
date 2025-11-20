@@ -247,27 +247,28 @@ For more troubleshooting, see [docs/troubleshooting.md](docs/troubleshooting.md)
 - **Network:** Access to your Superset instance
 - **Claude Desktop:** Latest version
 
-## Architecture
+## Architecture Flow
 
+```text
 ┌─────────────────┐
 │  Claude Desktop │
 │   (Local AI)    │
 └────────┬────────┘
-│ MCP Protocol
-▼
+         │ MCP Protocol
+         ▼
 ┌─────────────────┐
-│  MCP Bridge     │
-│  (Python)       │
-│  - main.py      │
+│   MCP Bridge    │
+│    (Python)     │
+│    - main.py    │
 └────────┬────────┘
-│ Superset REST API
-│ (Authenticated)
-▼
+         │ Superset REST API (Authenticated)
+         ▼
 ┌─────────────────┐
-│  Superset       │
-│  Instance       │
+│    Superset     │
+│    Instance     │
 │  (Your Server)  │
 └─────────────────┘
+
 
 ## Contributing
 
